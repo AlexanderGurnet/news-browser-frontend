@@ -1,0 +1,28 @@
+.subtitle_theme_grid-card {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1A1B22;
+
+  margin: 0 0 16px 0;
+
+  max-height: 110px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 900px) {
+  .subtitle_theme_grid-card {
+    -webkit-line-clamp: 4;
+    margin: 0 0 32px 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .subtitle_theme_grid-card {
+    margin: 0 0 24px 0;
+  }
+}

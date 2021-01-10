@@ -1,0 +1,10 @@
+.results__grid-card-source {
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #B6BCBF;
+
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin: 0;
+}

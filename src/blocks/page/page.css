@@ -1,0 +1,11 @@
+@import url("./__section/page__section.css");
+
+.page {
+  background-color: #fff;
+  position: relative;
+  z-index: -6;
+  box-sizing: border-box;
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

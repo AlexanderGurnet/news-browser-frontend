@@ -1,0 +1,26 @@
+.results__grid-card {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 576px;
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+@media screen and (max-width: 1300px) {
+  .results__grid-card {
+    min-height: 494px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .results__grid-card {
+    min-height: 420px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .results__grid-card {
+    min-height: 450px;
+  }
+}

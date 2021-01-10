@@ -1,0 +1,32 @@
+@import url("./_theme_registred/popup__change-popup-button_theme_registred.css");
+
+.popup__change-popup-button {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 400px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid transparent;
+  background: none;
+  outline: none;
+  padding: 0;
+  color: #2F71E5;
+  cursor: pointer;
+  transition-property: color border;
+  transition-timing-function: ease-out;
+  transition-duration: .3s;
+}
+
+.popup__change-popup-button:hover {
+  border-bottom: 1px solid #347EFF;
+}
+
+.popup__change-popup-button:active {
+  color: #2A65CC;
+  border-bottom: 1px solid #2A65CC;
+}
+
+.popup__change-popup-button:disabled {
+  cursor: not-allowed;
+  color: #B6BCBF;
+}

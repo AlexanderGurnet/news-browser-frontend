@@ -1,0 +1,20 @@
+@import url("./__title/saved-articles__title.css");
+@import url("./__articles-info/saved-articles__articles-info.css");
+@import url("./__key-words/saved-articles__key-words.css");
+@import url("./__key-word/saved-articles__key-word.css");
+
+.saved-articles {
+  padding: 40px 0 56px;
+}
+
+@media screen and (max-width: 768px) {
+  .saved-articles {
+    padding: 24px 0 32px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .saved-articles {
+    padding: 16px 0 32px;
+  }
+}

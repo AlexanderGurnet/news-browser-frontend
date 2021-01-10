@@ -1,0 +1,22 @@
+.header__link_selected::after {
+  content: '';
+  position: absolute;
+  border-bottom: 3px solid currentColor;
+  display: block;
+  width: 100%;
+  bottom: -1px;
+
+  color: currentColor;
+  transition: color .3s ease-out;
+}
+
+.header__link_selected:hover::after {
+  color: #2F71E5;
+  transition: color .3s ease-out;
+}
+
+@media screen and (max-width: 550px) {
+  .header__link_selected::after {
+    content: none;
+  }
+}

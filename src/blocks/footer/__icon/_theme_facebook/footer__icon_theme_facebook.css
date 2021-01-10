@@ -1,0 +1,7 @@
+.footer__icon_theme_facebook {
+background-image: url(../../../../images/facebook-icon.svg);
+}
+
+.footer__icon_theme_facebook:hover {
+  background-image: url(../../../../images/facebook-icon-blue.svg);
+}

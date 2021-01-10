@@ -1,0 +1,16 @@
+.results__grid.results__grid_theme_articles {
+  padding: 64px 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .results__grid.results__grid_theme_articles {
+    padding: 32px 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .results__grid.results__grid_theme_articles {
+    padding: 24px 0;
+  }
+}

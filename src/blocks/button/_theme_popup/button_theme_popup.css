@@ -1,0 +1,23 @@
+.button_theme_popup {
+  width: 100%;
+  transition: background-color .3s ease-out;
+  background-color: #2F71E5;
+  height: 64px;
+  padding: 18px 53px;
+  border: none;
+  color: white;
+}
+
+.button_theme_popup:hover {
+  background-color: #347EFF;
+}
+
+.button_theme_popup:active {
+  background-color: #2A65CC;
+}
+
+.button_theme_popup:disabled {
+  background-color: #E6E8EB;
+  cursor: not-allowed;
+  color: #B6BCBF;
+}

@@ -1,0 +1,21 @@
+@import url("./_disabled/header__nav-list-item_disabled.css");
+@import url("./_centered/header__nav-list-item_centered.css");
+
+.header__nav-list-item {
+  align-items: center;
+  min-height: inherit;
+  margin-left: 32px;
+}
+
+@media screen and (max-width: 900px) {
+  .header__nav-list-item {
+    margin: 0 0 0 16px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header__nav-list-item {
+    min-height: fit-content;
+    margin: 0 16px;
+  }
+}

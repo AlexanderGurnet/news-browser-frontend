@@ -1,0 +1,10 @@
+.header__nav-list_theme_articles-page {
+  min-height: inherit;
+}
+
+@media screen and (max-width: 550px) {
+  .header__nav-list_theme_articles-page {
+    background-color: white;
+    min-height: 420px;
+  }
+}

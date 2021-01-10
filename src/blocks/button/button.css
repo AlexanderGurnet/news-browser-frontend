@@ -1,0 +1,18 @@
+@import url("./_theme_logout/button_theme_logout.css");
+@import url("./_theme_logout-white/button_theme_logout-white.css");
+@import url("./_theme_logout-dark/button_theme_logout-dark.css");
+@import url("./_theme_main/button_theme_main.css");
+@import url("./_theme_search/button_theme_search.css");
+@import url("./_theme_results/button_theme_results.css");
+@import url("./_theme_popup/button_theme_popup.css");
+
+.button {
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  line-height: 24px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 100px;
+  cursor: pointer;
+}

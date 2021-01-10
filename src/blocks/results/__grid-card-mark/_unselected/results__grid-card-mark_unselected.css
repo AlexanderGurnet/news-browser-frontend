@@ -1,0 +1,9 @@
+.results__grid-card-mark_unselected {
+  transition: background-image .3s ease-out;
+  background-image: url("../../../../images/grid-card-mark-normal.svg");
+}
+
+.results__grid-card-mark_unselected:hover {
+  transition: background-image .3s ease-out;
+  background-image: url("../../../../images/grid-card-mark-dark.svg");
+}

@@ -1,0 +1,8 @@
+@import url("./_theme_main/subtitle_theme_main.css");
+@import url("./_theme_grid-card/subtitle_theme_grid-card.css");
+@import url("./_theme_results/subtitle_theme_results.css");
+@import url("./_theme_author/subtitle_theme_author.css");
+
+.subtitle {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}

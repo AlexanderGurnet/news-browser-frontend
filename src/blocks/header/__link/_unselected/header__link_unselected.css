@@ -1,0 +1,9 @@
+.header__link.header__link_unselected {
+  color: #D1D2D6;
+  transition: color .3s ease-out;
+}
+
+.header__link.header__link_unselected:hover {
+  color: currentColor;
+  transition: color .3s ease-out;
+}

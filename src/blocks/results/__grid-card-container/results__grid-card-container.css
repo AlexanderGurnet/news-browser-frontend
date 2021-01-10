@@ -1,0 +1,29 @@
+.results__grid-card-container {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 24px;
+  width: 100%;
+  height: calc(100% - 272px);
+  left: 0;
+  bottom: 0;
+  border-radius: 0 0 16px 16px;
+}
+
+@media screen and (max-width: 1300px) {
+  .results__grid-card-container {
+    height: calc(100% - 190px);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .results__grid-card-container {
+    height: calc(100% - 150px);
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .results__grid-card-container {
+    height: calc(100% - 186px);
+  }
+}

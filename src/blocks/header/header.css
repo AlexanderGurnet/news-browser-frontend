@@ -1,0 +1,28 @@
+@import url("./_theme_main-page/header_theme_main-page.css");
+@import url("./_theme_articles-page/header_theme_articles-page.css");
+@import url("./__link/header__link.css");
+@import url("./__container/header__container.css");
+@import url("./__nav/header__nav.css");
+@import url("./__nav-list/header__nav-list.css");
+@import url("./__nav-list-item/header__nav-list-item.css");
+@import url("./__menu-toggle-label/header__menu-toggle-label.css");
+@import url("./__menu-toggle-checkbox/header__menu-toggle-checkbox.css");
+
+.header {
+  display: block;
+  position: absolute;
+  width: 100%;
+  min-height: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    min-height: 66px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    min-height: 56px;
+  }
+}

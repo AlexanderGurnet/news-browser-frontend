@@ -1,0 +1,46 @@
+.button_theme_search {
+  position: absolute;
+  right: 20px;
+  margin-top: 55px;
+
+  background-color: #2F71E5;
+  border: none;
+  color: white;
+  padding: 18px 53px;
+  height: 64px;
+  transition: background-color .3s ease-out;
+}
+
+.button_theme_search:hover {
+  background-color: #347EFF;
+}
+
+.button_theme_search:active {
+  background-color: #2A65CC;
+}
+
+.button_theme_search:disabled {
+  background-color: #E6E8EB;
+  cursor: not-allowed;
+  color: #B6BCBF;
+}
+
+@media screen and (max-width: 900px) {
+  .button_theme_search {
+    height: 56px;
+    width: 160px;
+    padding: 14px 48px;
+
+    margin-top: 38px;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .button_theme_search {
+    display: block;
+    width: 100%;
+    position: static;
+    margin-top: 16px;
+  }
+}

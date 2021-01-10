@@ -1,0 +1,13 @@
+.subtitle_theme_author {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+  margin: 24px 0 0 0;
+}
+
+@media screen and (max-width: 600px) {
+  .subtitle_theme_author  {
+    margin: 16px 0 0 0;
+  }
+}
