@@ -1,0 +1,35 @@
+@import url("./_selected/results__grid-card-mark_selected.css");
+@import url("./_unselected/results__grid-card-mark_unselected.css");
+@import url("./_theme_bin/results__grid-card-mark_theme_bin.css");
+
+.results__grid-card-mark {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+@media screen and (max-width: 900px) {
+  .results__grid-card-mark {
+    right: 8px;
+    top: 8px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .results__grid-card-mark {
+    right: 16px;
+    top: 16px;
+  }
+}
+

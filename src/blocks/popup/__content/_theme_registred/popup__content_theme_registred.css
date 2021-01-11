@@ -1,0 +1,10 @@
+.popup__content.popup__content_theme_registred {
+  min-height: fit-content;
+  padding: 46px 36px;
+}
+
+@media screen and (max-width: 500px) {
+  .popup__content.popup__content_theme_registred {
+    min-height: auto;
+  }
+}

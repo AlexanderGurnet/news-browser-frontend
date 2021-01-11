@@ -1,0 +1,30 @@
+.results__grid-card-img {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 272px;
+  border-radius: 16px 16px 0 0;
+}
+
+@media screen and (max-width: 1300px) {
+  .results__grid-card-img {
+    height: 190px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .results__grid-card-img {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .results__grid-card-img {
+    height: 186px;
+  }
+}
+

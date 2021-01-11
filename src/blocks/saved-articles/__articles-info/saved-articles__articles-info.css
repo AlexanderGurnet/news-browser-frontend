@@ -1,0 +1,15 @@
+.saved-articles__articles-info {
+  max-width: 500px;
+}
+
+@media screen and (max-width: 900px) {
+  .saved-articles__articles-info {
+    max-width: 330px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .saved-articles__articles-info {
+    max-width: 288px;
+  }
+}

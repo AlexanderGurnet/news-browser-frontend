@@ -1,0 +1,20 @@
+.author__image > img {
+  width: 464px;
+  height: 464px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 900px) {
+  .author__image > img {
+    width: 232px;
+    height: 232px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .author__image > img {
+    width: 272px;
+    height: 272px;
+  }
+}

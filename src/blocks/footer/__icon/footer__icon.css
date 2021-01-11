@@ -1,0 +1,24 @@
+@import url("./_theme_github/footer__icon_theme_github.css");
+@import url("./_theme_facebook/footer__icon_theme_facebook.css");
+
+.footer__icon {
+  align-self: center;
+  display: block;
+  cursor: pointer;
+  width: 21px;
+  height: 21px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image .3s ease-out;
+  margin-right: 28px;
+}
+
+.footer__icon:last-of-type {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .footer__icon {
+    align-self: flex-start;
+  }
+}

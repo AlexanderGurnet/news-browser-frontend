@@ -1,0 +1,7 @@
+.footer__icon_theme_github {
+background-image: url(../../../../images/github-icon.svg);
+}
+
+.footer__icon_theme_github:hover {
+  background-image: url(../../../../images/github-icon-blue.svg);
+}

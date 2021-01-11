@@ -1,0 +1,7 @@
+.header__menu-toggle-checkbox:checked + .header__menu-toggle-label_theme_main-page::after {
+  background-image: url("../../../../images/cross.svg");
+}
+
+.header__menu-toggle-label_theme_main-page::before {
+  background-image: url("../../../../images/menu.svg");
+}

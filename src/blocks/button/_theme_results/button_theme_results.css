@@ -1,0 +1,33 @@
+.button_theme_results {
+  display: block;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid transparent;
+  color: #1A1B22;
+  padding: 18px 84px;
+  height: 64px;
+  transition: border .3s ease-out;
+}
+
+.button_theme_results:hover {
+  border: 1px solid #347EFF;
+}
+
+.button_theme_results:active {
+  color: #347EFF;
+}
+
+
+@media screen and (max-width: 900px) {
+  .button_theme_results {
+    height: 56px;
+    padding: 16px 60px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .button_theme_results {
+    width: 100%;
+    margin: 0;
+  }
+}

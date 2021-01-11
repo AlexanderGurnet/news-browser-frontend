@@ -1,0 +1,36 @@
+.button_theme_logout {
+  min-width: fit-content;
+  padding: 13px 40px 13px 20px;
+  text-align: left;
+  background: transparent no-repeat calc(100% - 15px) center;
+  color: currentColor;
+  border: 1px solid #D1D2D6;
+  transition: border-color .3s ease-out;
+}
+
+.button_theme_logout:active{
+  color: #2F71E5;
+  background-image: url(../../../images/button-logout-img-blue.svg);
+}
+
+.button_theme_logout:hover{
+  border-color: currentColor;
+  transition: border-color .3s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+  .button_theme_logout {
+    font-size: 16px;
+    padding: 8px 40px 8px 15px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .button_theme_logout {
+    text-align: center;
+    padding: 16px;
+    font-size: 18px;
+    width: 100%;
+    margin: 20px 0 24px;
+  }
+}

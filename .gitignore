@@ -1,0 +1,8 @@
+# Dependency directory
+node_modules
+
+# Bundled Project
+/dist
+
+# Optional REPL history
+.DS_Store

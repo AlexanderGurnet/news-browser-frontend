@@ -1,0 +1,25 @@
+.results__grid-card-mark-sign_not-logged-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  right: 69px;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 0 13px;
+}
+
+@media screen and (max-width: 900px) {
+  .results__grid-card-mark-sign_not-logged-in {
+    right: 53px;
+    top: 8px;
+    margin-left: 8px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .results__grid-card-mark-sign_not-logged-in {
+    right: 61px;
+    top: 16px;
+  }
+}

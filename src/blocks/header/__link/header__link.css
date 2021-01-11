@@ -1,0 +1,10 @@
+@import url("./_theme_logo/header__link_theme_logo.css");
+@import url("./_selected/header__link_selected.css");
+@import url("./_unselected/header__link_unselected.css");
+@import url("./_theme_nav-list-item/header__link_theme_nav-list-item.css");
+
+.header__link {
+  color: inherit;
+  width: fit-content;
+  text-align: center;
+}

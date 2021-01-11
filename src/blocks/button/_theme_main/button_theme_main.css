@@ -1,0 +1,33 @@
+.button_theme_main {
+  padding: 13px 15px;
+  text-align: center;
+  background-color: transparent;
+  color: currentColor;
+  border: 1px solid #D1D2D6;
+  transition: border-color .3s ease-out;
+}
+
+.button_theme_main:active{
+  color: #2F71E5;
+}
+
+.button_theme_main:hover{
+  border-color: currentColor;
+  transition: border-color .3s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+  .button_theme_main {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .button_theme_main {
+    padding: 16px;
+    font-size: 18px;
+    width: 100%;
+    margin: 20px 0 24px;
+  }
+}

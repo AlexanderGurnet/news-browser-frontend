@@ -1,0 +1,21 @@
+@import url("./_not-logged-in/results__grid-card-mark-sign_not-logged-in.css");
+@import url("./_logged-in/results__grid-card-mark-sign_logged-in.css");
+@import url("./_theme_invisible/results__grid-card-mark-sign_theme_invisible.css");
+@import url("./_theme_visible/results__grid-card-mark-sign_theme_visible.css");
+
+.results__grid-card-mark-sign {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 2;
+
+  border-radius: 8px;
+
+  min-height: 40px;
+
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+
+  color: black;
+  background-color: white;
+
+  pointer-events: none;
+}

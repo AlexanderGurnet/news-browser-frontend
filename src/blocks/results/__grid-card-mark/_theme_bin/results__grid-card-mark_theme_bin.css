@@ -1,0 +1,9 @@
+.results__grid-card-mark_theme_bin {
+  transition: background-image .3s ease-out;
+  background-image: url("../../../../images/trash-normal.svg");
+}
+
+.results__grid-card-mark_theme_bin:hover {
+  transition: background-image .3s ease-out;
+  background-image: url("../../../../images/trash-dark.svg");
+}

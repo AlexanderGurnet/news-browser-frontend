@@ -1,0 +1,10 @@
+.results__grid-card-mark-sign_theme_invisible {
+  opacity: 0;
+  transition: opacity .3s ease-out;
+  max-width: fit-content;
+}
+
+.results__grid-card-mark:hover + .results__grid-card-mark-sign_theme_invisible {
+  opacity: 1;
+  transition: opacity .3s ease-out;
+}

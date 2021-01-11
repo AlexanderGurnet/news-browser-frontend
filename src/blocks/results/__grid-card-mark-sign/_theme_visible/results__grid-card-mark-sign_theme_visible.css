@@ -1,0 +1,26 @@
+.results__grid-card-mark-sign_theme_visible {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 16px;
+  max-width: 142px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 900px) {
+  .results__grid-card-mark-sign_theme_visible {
+    left: 8px;
+    top: 8px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .results__grid-card-mark-sign_theme_visible {
+    left: 16px;
+    top: 16px;
+  }
+}

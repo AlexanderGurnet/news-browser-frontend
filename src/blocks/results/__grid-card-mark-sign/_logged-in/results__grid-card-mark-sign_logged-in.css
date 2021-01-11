@@ -1,0 +1,16 @@
+.results__grid-card-mark-sign_logged-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  right: 69px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0 13px;
+}
+
+@media screen and (max-width: 1300px) {
+  .results__grid-card-mark-sign_logged-in {
+    display: none;
+  }
+}

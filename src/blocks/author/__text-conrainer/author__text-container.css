@@ -1,0 +1,19 @@
+.author__text-container {
+  flex: 1;
+  padding-top: 50px;
+  margin-left: 56px;
+}
+
+@media screen and (max-width: 900px) {
+  .author__text-container {
+    padding-top: 0;
+    margin-left: 32px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .author__text-container {
+    padding-top: 24px;
+    margin-left: 0px;
+  }
+}

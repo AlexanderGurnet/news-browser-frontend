@@ -1,0 +1,19 @@
+.header__link_theme_logo {
+  position: relative;
+  z-index: 5;
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  line-height: 24px;
+  font-size: 20px;
+  color: currentColor;
+  transition: color .3s ease-out;
+}
+
+.header__link_theme_logo:hover {
+  color: #2F71E5;
+}
+
+@media screen and (max-width: 550px) {
+  .header__link_theme_logo {
+    font-size: 16px;
+  }
+}
