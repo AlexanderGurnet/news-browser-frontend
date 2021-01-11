@@ -5,11 +5,13 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
       <meta name="author" content="Alexander Gurnet">
       <meta name="description" content="Сервис-агрегатор по поиску новостей со всего мира">
-      <link rel="stylesheet" href="index/index.ca116bfae2675b5594ef.css">
+      <link rel="stylesheet" href="index/index.71abd854926d0465ec31.css">
       <link rel="icon" href="./images/favicon.png">
       <title>News Browser | Главная</title>
   </head>
   <body class="page">
+    <!-- 2 первых попапа работают с применением базового js, для удобства отображения.
+    Так же в попапах отображены ошибки валидации, они реализованны в виде текстового контента в span элементах-->
     <div class="popup popup_theme_reg">
       <div class="popup__content">
         <img src="./images/close.svg" alt="крестик для закртия попапа" class="popup__close">
@@ -61,6 +63,7 @@
         </form>
       </div>
     </div>
+    <!-- последний попап можно отобразить добавиа класс popup_is-opened к следующему div элементу-->
     <div class="popup popup_theme_success">
       <div class="popup__content popup__content_theme_registred">
         <img src="./images/close.svg" alt="крестик для закртия попапа" class="popup__close">
@@ -74,10 +77,14 @@
         <input type="checkbox" id="checkbox" class="header__menu-toggle-checkbox"/>
         <label for="checkbox" class="header__menu-toggle-label header__menu-toggle-label_theme_main-page"></label>
         <nav class="header__nav">
-          <ul class="header__nav-list header__nav-list_theme_main-page">
+          <!-- (для отображения залогиненого и незалогинненого состояний) чтобы отобразить два элемента навигации в выплыващем меню для разрешения 550px
+          и ниже нужно заменить класс header__nav-list_size_one на header__nav-list_size_two
+          -->
+          <ul class="header__nav-list header__nav-list_theme_main-page header__nav-list_size_one">
             <li class="header__nav-list-item">
               <a class="header__link header__link_theme_nav-list-item link header__link_selected" href="./index.html">Главная</a>
             </li>
+            <!-- раскоментируйте следующий элемент, затем закоментируйте следующий и раскоментируйте последний, чтобы отобразить залогиненное состояние главной страницы -->
             <!-- <li class="header__nav-list-item">
               <a class="header__link header__link_theme_nav-list-item link header__link_unselected" href="./articles.html">Сохраненные статьи</a>
             </li> -->
@@ -102,7 +109,10 @@
           </form>
         </article>
       </section>
-      <section class="results results_shown">
+      <!-- чтобы отобразить секцию ниже, нужно заменить класс results_hidden на класс results_shown -->
+      <section class="results results_hidden">
+        <!-- затем, чтобы отобразить одно из трех состояний секции, нужно заменить модификатор _hidden
+        у любой из 3-х секций, которую хотите отобразить, на модификатор _shown, при этом у остальных оставить модификатор _hidden -->
         <div class="results__not-found results__not-found_hidden">
           <img class="results__not-found-img" src="./images/not-found.svg" alt="Картинка лупы с грустным лицом">
           <h2 class="title title_theme_results">Ничего не найдено</h2>
@@ -113,7 +123,7 @@
           <i class="results__circle-preloader"></i>
           <p class="subtitle subtitle_theme_results">Идет поиск новостей...</p>
         </div>
-        <div class="results__container results__container_shown page__section">
+        <div class="results__container results__container_hidden page__section">
           <h2 class="title title_theme_section">Результаты поиска</h2>
           <div class="results__grid">
             <article class="results__grid-card">
