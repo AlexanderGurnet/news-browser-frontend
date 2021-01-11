@@ -5,6 +5,5 @@
 @media screen and (max-width: 550px) {
   .header__nav-list_theme_main-page {
     background-color: #1A1B22;
-    min-height: 370px;
   }
 }

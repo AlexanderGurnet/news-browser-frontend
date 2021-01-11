@@ -1,5 +1,7 @@
 @import url("./_theme_articles-page/header__nav-list_theme_articles-page.css");
 @import url("./_theme_main-page/header__nav-list_theme_main-page.css");
+@import url("./_size_one/header__nav-list_size_one.css");
+@import url("./_size_two/header__nav-list_size_two.css");
 
 .header__nav-list {
   display: flex;
