@@ -1,6 +1,8 @@
+// Page element
+
 const PAGE = document.querySelector('.page');
 
-//Header template
+// Templates
 
 const { content: HEADER_TEMPLATE } = document.querySelector('#header');
 
@@ -16,8 +18,8 @@ const HEADER_MENU_TOGGLE_ELEMENT = HEADER_TEMPLATE.querySelector('.header__menu-
 const HEADER_LINK_ELEMENT = HEADER_TEMPLATE.querySelector('.header__nav-list-item_main').firstElementChild;
 const HEADER_LINK_ARTICLES_ELEMENT = HEADER_TEMPLATE.querySelector('.header__nav-list-item_articles').firstElementChild;
 
-
 // Header classes
+
 const HEADER_CONTAINER_CLASS = 'header__container';
 const HEADER_CONTAINER_HIDDEN_CLASS = 'header__container_hidden';
 const HEADER_NAV_ITEM_CENTERED_CLASS = 'header__nav-list-item_centered';
@@ -36,14 +38,9 @@ const BUTTON_LOGOUT_WHITE_CLASS = 'button_theme_logout-white';
 const BUTTON_LOGOUT_DARK_CLASS = 'button_theme_logout-dark';
 const BUTTON_MAIN_CLASS = 'button_theme_main';
 
-// Popup Elements
-
-const REG_POPUP_ELEMENT = document.querySelector('.popup_theme_reg');
-
-// Popup Classes
+// Popup classes
 
 const POPUP_OPENED_CLASS = 'popup_is-opened';
-
 
 export {
   PAGE,
@@ -77,7 +74,5 @@ export {
   BUTTON_LOGOUT_DARK_CLASS,
   BUTTON_MAIN_CLASS,
 
-  REG_POPUP_ELEMENT,
-
   POPUP_OPENED_CLASS,
-}
+};
