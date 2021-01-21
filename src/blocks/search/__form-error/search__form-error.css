@@ -1,5 +1,6 @@
 .search__form-error {
   display: flex;
+  box-sizing: border-box;
   justify-content: flex-start;
   position: relative;
   width: 100%;
