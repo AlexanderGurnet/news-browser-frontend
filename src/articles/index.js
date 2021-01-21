@@ -1,16 +1,21 @@
 import './style.css';
 
-// import Header from '../js/components/Header';
+import MainApi from '../js/api/MainApi';
+import Header from '../js/components/Header';
+import ArticlesInfo from '../js/components/ArticlesInfo';
 
-// const page = document.querySelector('.page');
+import { MAIN_API_CONFIG } from '../js/constants/api-configs';
+import USER_NAME from '../js/constants/user';
 
-// const { content: headerTemplate } = document.querySelector('#header');
+const mainApi = new MainApi(MAIN_API_CONFIG);
+const header = new Header({ headerTheme: 'articles' });
+const articlesInfo = new ArticlesInfo();
 
+articlesInfo.setDependecies({ api: mainApi });
 
-// const header = new Header({
-//   container: page,
-//   headerTemplate: headerTemplate,
-//   headerTheme: 'articles',
-// })
+if (!USER_NAME) {
+  window.location.href = '../';
+}
 
-// header.render({isLoggedIn: true, userName: 'Alex'})
+header.render({ isLoggedIn: true, userName: USER_NAME });
+articlesInfo.render();

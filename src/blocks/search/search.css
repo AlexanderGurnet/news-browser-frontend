@@ -1,5 +1,6 @@
 @import url("./__container/search__container.css");
 @import url("./__form-input/search__form-input.css");
+@import url("./__form-error/search__form-error.css");
 
 .search {
   display: flex;

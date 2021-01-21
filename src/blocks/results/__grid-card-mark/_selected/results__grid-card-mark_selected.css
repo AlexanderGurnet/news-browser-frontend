@@ -1,3 +1,4 @@
 .results__grid-card-mark_selected {
+  transition: background-image .3s ease-out;
   background-image: url("../../../../images/grid-card-mark-selected.svg");
 }

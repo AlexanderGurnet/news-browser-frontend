@@ -1,0 +1,12 @@
+@import url('./_hidden/results__error_hidden.css');
+
+.results__error{
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FF0000;
+  max-width: 80%;
+  margin: 0 auto;
+}

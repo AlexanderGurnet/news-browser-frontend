@@ -4,6 +4,7 @@
 @import url("./_theme_main/button_theme_main.css");
 @import url("./_theme_search/button_theme_search.css");
 @import url("./_theme_results/button_theme_results.css");
+@import url("./_theme_results-hidden/button_theme_results-hidden.css");
 @import url("./_theme_popup/button_theme_popup.css");
 
 .button {
