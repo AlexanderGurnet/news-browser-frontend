@@ -1,0 +1,15 @@
+.search__form-error {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 400px;
+  font-size: 15px;
+  line-height: 15px;
+  color: #FF0000;
+  margin-top: 10px;
+  min-height: 15px;
+  padding: 0 20px;
+}

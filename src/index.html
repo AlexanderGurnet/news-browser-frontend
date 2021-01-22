@@ -1,38 +1,36 @@
 <!DOCTYPE html>
   <html lang="ru">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-      <meta name="author" content="Alexander Gurnet">
-      <meta name="description" content="Сервис-агрегатор по поиску новостей со всего мира">
-      <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css%>">
-      <link rel="icon" href="<%=require('./images/favicon.png')%>">
-      <title>News Browser | Главная</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="author" content="Alexander Gurnet">
+    <meta name="description" content="Сервис-агрегатор по поиску новостей со всего мира">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css%>">
+    <link rel="icon" href="<%=require('./images/favicon.png')%>">
+    <title>News Browser | Главная</title>
   </head>
   <body class="page">
-    <!-- 2 первых попапа работают с применением базового js, для удобства отображения.
-    Так же в попапах отображены ошибки валидации, они реализованны в виде текстового контента в span элементах-->
     <div class="popup popup_theme_reg">
       <div class="popup__content">
         <img src="<%=require('./images/close.svg')%>" alt="крестик для закртия попапа" class="popup__close">
         <h3 class="popup__title">Регистрация</h3>
-        <form class="popup__form" name="add" novalidate>
+        <form class="popup__form" name="reg" novalidate>
           <div class="popup__row">
             <label class="popup__label" for="email-theme-reg">Email</label>
-            <input type="text" name="email-theme-reg" id="email-theme-reg" class="popup__input" minlength="2" maxlength="30" required placeholder="Введите почту">
-            <span class="popup__error" data-for="email-theme-reg">Неправильный формат email</span>
+            <input type="text" name="email-theme-reg" id="email-theme-reg" class="popup__input" minlength="2" maxlength="30" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$" required placeholder="Введите почту">
+            <span class="popup__error" data-for="email-theme-reg"></span>
           </div>
           <div class="popup__row">
             <label class="popup__label" for="password-theme-reg">Пароль</label>
-            <input type="password" name="password-theme-reg" id="password-theme-reg" class="popup__input" required placeholder="Введите пароль">
-            <span class="popup__error" data-for="password-theme-reg">Неправильный формат пароля</span>
+            <input type="password" name="password-theme-reg" id="password-theme-reg" class="popup__input" minlength="8" maxlength="15" required placeholder="Введите пароль">
+            <span class="popup__error" data-for="password-theme-reg"></span>
           </div>
           <div class="popup__row">
             <label class="popup__label" for="name">Имя</label>
-            <input type="text" name="name" id="name" class="popup__input" required placeholder="Введите своё имя">
-            <span class="popup__error" data-for="name">Неправильный формат имени</span>
+            <input type="text" name="name" id="name" class="popup__input" minlength="2" maxlength="30" required placeholder="Введите своё имя">
+            <span class="popup__error" data-for="name"></span>
           </div>
-          <span class="popup__error popup__error_centered" data-for="name">Такой пользователь уже есть</span>
+          <span class="popup__error popup__error_centered" data-for="name"></span>
           <button type="submit" name="button" class="button button_theme_popup" disabled>Зарегистрироваться</button>
           <p class="popup__change-popup">или
             <button class="popup__change-popup-button">Войти</button>
@@ -44,16 +42,16 @@
       <div class="popup__content">
         <img src="<%=require('./images/close.svg')%>" alt="крестик для закртия попапа" class="popup__close">
         <h3 class="popup__title">Вход</h3>
-        <form class="popup__form" name="add" novalidate>
+        <form class="popup__form" name="login" novalidate>
           <div class="popup__row">
             <label class="popup__label" for="email">Email</label>
-            <input type="text" name="email" id="email" class="popup__input" minlength="2" maxlength="30" required placeholder="Введите почту">
-            <span class="popup__error" data-for="email">Неправильный формат email</span>
+            <input type="text" name="email" id="email" class="popup__input" minlength="2" maxlength="30" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$" required placeholder="Введите почту">
+            <span class="popup__error" data-for="email"></span>
           </div>
           <div class="popup__row">
             <label class="popup__label" for="password">Пароль</label>
-            <input type="password" name="password" id="password" class="popup__input" required placeholder="Введите пароль">
-            <span class="popup__error" data-for="password">Неправильный формат пароля</span>
+            <input type="password" name="password" id="password" class="popup__input" minlength="8" maxlength="15" required placeholder="Введите пароль">
+            <span class="popup__error" data-for="password"></span>
           </div>
           <span class="popup__error popup__error_centered" data-for="name"></span>
           <button type="submit" name="button" class="button button_theme_popup">Войти</button>
@@ -63,7 +61,6 @@
         </form>
       </div>
     </div>
-    <!-- последний попап можно отобразить добавиа класс popup_is-opened к следующему div элементу-->
     <div class="popup popup_theme_success">
       <div class="popup__content popup__content_theme_registred">
         <img src="<%=require('./images/close.svg')%>" alt="крестик для закртия попапа" class="popup__close">
@@ -71,48 +68,20 @@
         <button class="popup__change-popup-button popup__change-popup-button_theme_registred">Войти</button>
       </div>
     </div>
-    <header class="header header_theme_main-page">
-      <div class="header__container page__section">
-        <a class="header__link header__link_theme_logo link link_selected" href="./index.html">NewsExplorer</a>
-        <input type="checkbox" id="checkbox" class="header__menu-toggle-checkbox"/>
-        <label for="checkbox" class="header__menu-toggle-label header__menu-toggle-label_theme_main-page"></label>
-        <nav class="header__nav">
-          <!-- (для отображения залогиненого и незалогинненого состояний) чтобы отобразить два элемента навигации в выплыващем меню для разрешения 550px
-          и ниже нужно заменить класс header__nav-list_size_one на header__nav-list_size_two
-          -->
-          <ul class="header__nav-list header__nav-list_theme_main-page header__nav-list_size_one">
-            <li class="header__nav-list-item">
-              <a class="header__link header__link_theme_nav-list-item link header__link_selected" href="./index.html">Главная</a>
-            </li>
-            <!-- раскоментируйте следующий элемент, затем закоментируйте следующий и раскоментируйте последний, чтобы отобразить залогиненное состояние главной страницы -->
-            <!-- <li class="header__nav-list-item">
-              <a class="header__link header__link_theme_nav-list-item link header__link_unselected" href="./articles.html">Сохраненные статьи</a>
-            </li> -->
-            <li class="header__nav-list-item header__nav-list-item_centered">
-              <input type="button" value="Авторизоваться" class="button button_theme_main"/>
-            </li>
-            <!-- <li class="header__nav-list-item header__nav-list-item_centered">
-              <input type="button" value="Грета" class="button button_theme_logout button_theme_logout-white"/>
-            </li> -->
-          </ul>
-        </nav>
-      </div>
-    </header>
     <main class="main">
       <section class="search">
         <article class="search__container">
           <h2 class="title title_theme_main">Что творится в мире?</h2>
           <p class="subtitle subtitle_theme_main">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
-          <form class="search__form" novalidate>
-            <input class="search__form-input" type="text" required placeholder="Введите тему новости" minlength="2" maxlength="30">
+          <form class="search__form" name="search" novalidate>
+            <input class="search__form-input" name="search-bar" type="text" required placeholder="Введите тему новости" minlength="2" maxlength="30">
             <button class="button button_theme_search" type="submit">Искать</button>
+            <span class="search__form-error" data-for="search-bar"></span>
           </form>
         </article>
       </section>
-      <!-- чтобы отобразить секцию ниже, нужно заменить класс results_hidden на класс results_shown -->
       <section class="results results_hidden">
-        <!-- затем, чтобы отобразить одно из трех состояний секции, нужно заменить модификатор _hidden
-        у любой из 3-х секций, которую хотите отобразить, на модификатор _shown, при этом у остальных оставить модификатор _hidden -->
+        <p class="results__error results__error_hidden subtitle"></p>
         <div class="results__not-found results__not-found_hidden">
           <img class="results__not-found-img" src="<%=require('./images/not-found.svg')%>" alt="Картинка лупы с грустным лицом">
           <h2 class="title title_theme_results">Ничего не найдено</h2>
@@ -126,57 +95,6 @@
         <div class="results__container results__container_hidden page__section">
           <h2 class="title title_theme_section">Результаты поиска</h2>
           <div class="results__grid">
-            <article class="results__grid-card">
-              <button class="results__grid-card-mark results__grid-card-mark_unselected"></button>
-              <div class="results__grid-card-mark-sign results__grid-card-mark-sign_not-logged-in results__grid-card-mark-sign_theme_invisible">Войдите, чтобы сохранять статьи</div>
-              <a class="results__grid-card-link" target="_blank" href="https://nat-geo.ru/nature/pervozdannaya-tajga-novyj-fotoproekt-igorya-shpilenka/">
-                <img class="results__grid-card-img" src="<%=require('./images/image_07.png')%>" alt="картинка новостной карточки">
-                <div class="results__grid-card-container">
-                  <time class="results__grid-card-date" datetime="2019-09-02T23:42+03:00">2 августа, 2019</time>
-                  <h3 class="title title_theme_grid-card">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-                  <p class="subtitle subtitle_theme_grid-card">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam rem suscipit modi cupiditate provident quod libero delectus hic tenetur recusandae corrupti, soluta facere similique rerum veritatis tempora, sapiente sunt voluptates! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ab recusandae ducimus minus quo et repellendus atque quae. Reprehenderit minus non iusto animi. Beatae vel ratione unde id vitae sit?</p>
-                  <p class="results__grid-card-source">Медуза</p>
-                </div>
-              </a>
-            </article>
-            <article class="results__grid-card">
-              <button class="results__grid-card-mark results__grid-card-mark_unselected"></button>
-              <div class="results__grid-card-mark-sign results__grid-card-mark-sign_not-logged-in results__grid-card-mark-sign_theme_invisible">Войдите, чтобы сохранять статьи</div>
-              <a class="results__grid-card-link" target="_blank" href="https://nat-geo.ru/nature/pervozdannaya-tajga-novyj-fotoproekt-igorya-shpilenka/">
-                <img class="results__grid-card-img" src="<%=require('./images/image_07.png')%>" alt="картинка новостной карточки">
-                <div class="results__grid-card-container">
-                  <time class="results__grid-card-date" datetime="2019-09-02T23:42+03:00">2 августа, 2019</time>
-                  <h3 class="title title_theme_grid-card">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-                  <p class="subtitle subtitle_theme_grid-card">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam rem suscipit modi cupiditate provident quod libero delectus hic tenetur recusandae corrupti, soluta facere similique rerum veritatis tempora, sapiente sunt voluptates! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ab recusandae ducimus minus quo et repellendus atque quae. Reprehenderit minus non iusto animi. Beatae vel ratione unde id vitae sit?</p>
-                  <p class="results__grid-card-source">Медуза</p>
-                </div>
-              </a>
-            </article>
-            <article class="results__grid-card">
-              <button class="results__grid-card-mark results__grid-card-mark_unselected"></button>
-              <div class="results__grid-card-mark-sign results__grid-card-mark-sign_not-logged-in results__grid-card-mark-sign_theme_invisible">Войдите, чтобы сохранять статьи</div>
-              <a class="results__grid-card-link" target="_blank" href="https://nat-geo.ru/nature/pervozdannaya-tajga-novyj-fotoproekt-igorya-shpilenka/">
-                <img class="results__grid-card-img" src="<%=require('./images/image_07.png')%>" alt="картинка новостной карточки">
-                <div class="results__grid-card-container">
-                  <time class="results__grid-card-date" datetime="2019-09-02T23:42+03:00">2 августа, 2019</time>
-                  <h3 class="title title_theme_grid-card">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-                  <p class="subtitle subtitle_theme_grid-card">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam rem suscipit modi cupiditate provident quod libero delectus hic tenetur recusandae corrupti, soluta facere similique rerum veritatis tempora, sapiente sunt voluptates! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ab recusandae ducimus minus quo et repellendus atque quae. Reprehenderit minus non iusto animi. Beatae vel ratione unde id vitae sit?</p>
-                  <p class="results__grid-card-source">Медуза</p>
-                </div>
-              </a>
-            </article>
-            <article class="results__grid-card">
-              <button class="results__grid-card-mark results__grid-card-mark_selected"></button>
-              <a class="results__grid-card-link" target="_blank" href="https://nat-geo.ru/nature/pervozdannaya-tajga-novyj-fotoproekt-igorya-shpilenka/">
-                <img class="results__grid-card-img" src="<%=require('./images/image_07.png')%>" alt="картинка новостной карточки">
-                <div class="results__grid-card-container">
-                  <time class="results__grid-card-date" datetime="2019-09-02T23:42+03:00">2 августа, 2019</time>
-                  <h3 class="title title_theme_grid-card">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-                  <p class="subtitle subtitle_theme_grid-card">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam rem suscipit modi cupiditate provident quod libero delectus hic tenetur recusandae corrupti, soluta facere similique rerum veritatis tempora, sapiente sunt voluptates! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ab recusandae ducimus minus quo et repellendus atque quae. Reprehenderit minus non iusto animi. Beatae vel ratione unde id vitae sit?</p>
-                  <p class="results__grid-card-source">Медуза</p>
-                </div>
-              </a>
-            </article>
           </div>
           <button class="button button_theme_results">Показать еще</button>
         </div>
@@ -190,10 +108,10 @@
         <article class="author__text-container">
           <h2 class="title title_theme_section">Об авторе</h2>
           <p class="subtitle subtitle_theme_author">Приветствую, меня зовут Александр, я являюсь автором данного проекта.
-            При создании этого новостного агрегатора я использовал слдующий стек технологий: HTML, CSS, JavaScript, NodeJS, Webpack.
+            При создании этого новостного агрегатора я использовал следующий стек технологий: HTML, CSS, JavaScript, NodeJS, Webpack.
             Знания о всех перечисленных выше технологиях мне подарил обучающий курс Яндекс.Практикума, а именно курс "Веб-разработчик"</p>
           <p class="subtitle subtitle_theme_author">Главная цель на ближайщее будущее в веб-разработке -
-            это изучить JS фреймворк React и заняться поиском работы, пожелайте мне удачи! :)</p>
+            это изучить JS фреймворк React и заняться поиском работы, пожелайте мне удачи!</p>
         </article>
       </section>
     </main>
@@ -218,6 +136,31 @@
         </div>
       </div>
     </footer>
+    <template id="header">
+      <header class="header">
+        <div class="header__container page__section">
+          <a class="header__link header__link_theme_logo link link_selected" href="./index.html">NewsExplorer</a>
+          <input type="checkbox" id="checkbox" class="header__menu-toggle-checkbox"/>
+          <label for="checkbox" class="header__menu-toggle-label"></label>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-list-item header__nav-list-item_main">
+                <a class="header__link header__link_theme_nav-list-item link" href="./index.html">Главная</a>
+              </li>
+              <li class="header__nav-list-item header__nav-list-item_articles">
+                <a class="header__link header__link_theme_nav-list-item link" href="./articles.html">Сохраненные статьи</a>
+              </li>
+              <li class="header__nav-list-item header__nav-list-item_logout">
+                <input type="button" value="Грета" class="button button_theme_logout"/>
+              </li>
+              <li class="header__nav-list-item header__nav-list-item_login">
+                <input type="button" value="Авторизоваться" class="button button_theme_main"/>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </template>
     <script src="<%=htmlWebpackPlugin.files.js%>"></script>
   </body>
   </html>
