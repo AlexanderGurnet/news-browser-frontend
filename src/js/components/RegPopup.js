@@ -38,7 +38,7 @@ export default class RegPopup extends Popup {
     e.preventDefault();
     const arr = super.getInfo();
     const userObj = {
-      email: arr[0],
+      email: arr[0].toLowerCase(),
       password: arr[1],
       name: arr[2],
     };

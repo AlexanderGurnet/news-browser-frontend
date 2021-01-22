@@ -12,6 +12,7 @@ const createCard = (
     page,
     keyWord,
     apiLink,
+    articlesInfoLink,
     _id,
   },
 ) => new NewsCard(
@@ -26,6 +27,7 @@ const createCard = (
     page,
     keyWord,
     apiLink,
+    articlesInfoLink,
     _id,
   },
 );
